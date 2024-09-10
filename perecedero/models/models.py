@@ -3,13 +3,14 @@ from odoo import models, fields, api
 class almacen(models.Model):
     _inherit = 'stock.warehouse'
 
-#     name = fields.Char()
-#     value = fields.Integer()
-#     value2 = fields.Float(compute="_value_pc", store=True)
-#     description = fields.Text()
-#
-#     @api.depends('value')
-#     def _value_pc(self):
-#         for record in self:
-#             record.value2 = float(record.value) / 100
+# class lote(models.Model):
+#     _inherit = 'stock.production.lot'
 
+class stock(models.Model):
+    _inherit = 'res.company'
+
+class categoria(models.Model):
+    _inherit = 'product.category'
+
+class categoria(models.Model):
+    _inherit = 'product.product'
