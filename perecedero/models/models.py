@@ -1,11 +1,7 @@
 # -*- coding: utf-8 -*-
-
-# from odoo import models, fields, api
-
-
-# class perecedero(models.Model):
-#     _name = 'perecedero.perecedero'
-#     _description = 'perecedero.perecedero'
+from odoo import models, fields, api
+class almacen(models.Model):
+    _inherit = 'stock.warehouse'
 
 #     name = fields.Char()
 #     value = fields.Integer()

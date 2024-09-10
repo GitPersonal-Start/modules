@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+
+        <!-- Acción para la vista de Almacenes -->
+        <record id="action_almacen" model="ir.actions.act_window">
+            <field name="name">Almacenes</field>
+            <field name="res_model">stock.warehouse</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Menú principal para Almacenes -->
+        <menuitem id="almacen_menu_view" name="Almacenes" sequence="10"/>
+
+        <!-- Submenú para Almacen -->
+        <menuitem id="submenu_almacen_menu_view" name="Almacen" parent="almacen_menu_view" action="action_almacen"/>
+
+    </data>
+</odoo>
