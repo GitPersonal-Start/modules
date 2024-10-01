@@ -1,0 +1,41 @@
+<odoo>
+    <!-- Vista de formulario para el modelo producto -->
+    <record id="view_producto_form" model="ir.ui.view">
+        <field name="name">producto.form</field>
+        <field name="model">mgpp.producto</field>
+        <field name="arch" type="xml">
+            <form string="Producto Perecedero">
+                <!-- Grupo para los campos principales del producto -->
+                <group>
+                    <field name="name" string="Nombre del Producto" required="1"/>
+                    <field name="lot_id" string="Lote" required="1"/>
+                    <field name="fecha_caducidad" required="1"/>
+                </group>
+                
+                <!-- Grupo para el precio y estado del producto -->
+                <group>
+                    <field name="precio_original" required="1"/>
+                    <field name="estado" required="1"/>
+                </group>
+                
+                <!-- Grupo para la información de rebajas -->
+                <group>
+                    <field name="rebaja_aplicada"/>
+                    <field name="rebaja_porcentaje" attrs="{'invisible': [('rebaja_aplicada', '=', False)]}"/>
+                </group>
+                
+                <!-- Información del usuario que registró el producto -->
+                <group>
+                    <field name="usuario_registro" string="Registrado por" required="1"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <!-- Acción para abrir la vista del formulario de productos -->
+    <record id="action_producto" model="ir.actions.act_window">
+        <field name="name">Productos Perecederos</field>
+        <field name="res_model">mgpp.producto</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+</odoo>

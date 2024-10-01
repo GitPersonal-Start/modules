@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <menuitem name="Perecederos" id="mgpp.menu_root"/>
+
+    <menuitem name="Productos" id="mgpp.produco_submenu" parent="mgpp.menu_root"/>
+
+    <menuitem name="Lista de productos" id="mgpp.producto_submenu_list" parent="mgpp.produco_submenu"
+              action="action_producto"/>
+</odoo>
