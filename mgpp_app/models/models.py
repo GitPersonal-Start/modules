@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-
+# from encodings import utf_8
 # from odoo import models, fields, api
 
 

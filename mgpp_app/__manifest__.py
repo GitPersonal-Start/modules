@@ -2,20 +2,20 @@
 {
     'name': "mgpp_app",
 
-    'summary': "Short (1 phrase/line) summary of the module's purpose",
+    'summary': "Modulo de Gestion de Productos Perecederos",
 
     'description': """
-Long description of module's purpose
+Modulo para la gestion de productos perecederos en la empresa de CIMEX
     """,
 
-    'author': "My Company",
+    'author': "CIMEX",
     'website': "https://www.yourcompany.com",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
     # for the full list
-    'category': 'Uncategorized',
-    'version': '0.1',
+    'category': 'Inventory',
+    'version': '1.0',
 
     # any module necessary for this one to work correctly
     'depends': ['base'],
@@ -30,5 +30,7 @@ Long description of module's purpose
     'demo': [
         'demo/demo.xml',
     ],
+    'installable': True,
+    'application': True,
 }
 
